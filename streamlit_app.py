@@ -58,7 +58,7 @@ target_mapper = {'Adelie': 0,
                  'Gentoo': 2}
 def target_encode(value):
   return target_mapper[value]
-
+y_raw = y_raw.str.strip().str.capitalize()
 y = y_raw.apply(target_encode)
 y
 y_raw
