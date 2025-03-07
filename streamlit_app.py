@@ -16,5 +16,15 @@ with st.expander('Data'): # Dropdown for data below
   st.write('**y**')
   y = df.species
   y
+# Scatter plot for data
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
+
+# Data preparatios
+with st.sidebar:
+  st.header('Input features')
+  island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
+  gender = st.selectbox('Gender', ('Male', 'Female"))
+  bill_length_mm = st.slider('Bill length (mm)', 32.1, 59.6, 43.9)                                 
+                                  
+  
