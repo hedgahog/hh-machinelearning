@@ -41,7 +41,7 @@ with st.sidebar:
 with st.expander('Input features'):
   st.write('**Input penguin**')
   input_df
-  st.write('**Combined penguin data**'
+  st.write('**Combined penguin data**')
   input_penguins
         
                                   
