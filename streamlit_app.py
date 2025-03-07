@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
@@ -83,6 +84,41 @@ df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
 prediction_proba.rename(columns={0: 'Adelie',
                                  1: 'Chinstrap',
                                  2: 'Gentoo'})
-df_prediction_proba
+
+
+# Display predicted species
+st.subheader('Predicted Species')
+st.dataframe(df_prediction_proba,
+             column_config={
+               'Adelie': st.column_config.ProgessColumn(
+                 'Adelie',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+              ),
+              'Chinstrap': st.column_config.ProgessColumn(
+                 'Adelie',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+              ),
+              'Gentoo': st.column_config.ProgessColumn(
+                 'Adelie',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+              ),
+            }, hide_index=True)
+
+              
+                 
+
+
+
+penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+st.success(str[penguins_species[prediction][0])
 
   
