@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.title("EvoBees Variant Predictor 🐝")
+st.title("EvoBeevos Variant Predictor 🐝")
 
 # Display result and score on main page
 # Display CliVar comparison on main page as well?
